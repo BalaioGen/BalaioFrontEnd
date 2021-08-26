@@ -1,0 +1,39 @@
+.social-network {
+    list-style: none;
+    padding: 0;
+    }
+    
+    ul.social-network li {
+        display: inline;
+        margin: 0;
+        padding: 5px;
+    }
+    
+    .fa {
+        font-size: 35pt;
+        color: white;
+        padding: 10px;
+    }
+    
+    /* quando passa o mouse em cima = hover */
+    .fa-facebook-square:hover{
+        color: rgb(48, 48, 253);
+    }
+    
+    .fa-instagram:hover {
+        color: rgb(231, 71, 138);
+    }
+    
+    .fa-linkedin-square:hover {
+        color: #0072b1;
+    }
+
+    /* Persnonalização */
+
+   .bg-laranja {
+    background-color:#f69733;
+    }
+
+    .bg-azul {
+    background-color: #5ce1e6;
+    }

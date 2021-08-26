@@ -1,44 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-light menu-color ">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-light menu-color fonte-site ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li class="nav-item active">
-            <img src="https://i.imgur.com/Pk2yHqh.png" alt="Imagem logo" width="100px" height="100px">
-        </li>
-        
-        <li class="nav-item pl-3">
-            <a class="nav-link m-0" href="#">Home</a>
-          </li>
 
-        <li class="nav-item pl-3">
-          <a class="nav-link m-0" href="#">Sobre nós</a>
-        </li>
-        
-        <li class="nav-item dropdown pl-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Produtos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Artesanato</a>
-            <a class="dropdown-item" href="#">Frutas</a>
-            <!-- <div class="dropdown-divider"></div> -->
-            <a class="dropdown-item" href="#">Vegetais</a>
-          </div>
-        
-        </li>
-        <li class="nav-item pl-3">
-            <a class="nav-link " href="#">Vendedores</a>
-          </li>
-      
-      <li>
-      <form class="form-inline ml-3">
-        <input class="form-control mr-sm-2 imput-size text-center" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-pesquisar" type="submit">Pesquisar</button>
-      </form>
-    </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item active">
+                <img src="https://i.imgur.com/Pk2yHqh.png" alt="Imagem logo" width="150px" height="150px">
+            </li>
+
+            <li class="nav-item pl-5">
+                <a class="nav-link m-0" href="/home">Home</a>
+            </li>
+
+            <li class="nav-item pl-3">
+                <a class="nav-link m-0" routerLink='/sobre'>Sobre nós</a>
+            </li>
+
+            <li class="nav-item dropdown pl-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Produtos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Artesanato</a>
+                    <a class="dropdown-item" href="#">Frutas</a>
+                    <!-- <div class="dropdown-divider"></div> -->
+                    <a class="dropdown-item" href="#">Vegetais</a>
+                </div>
+
+            </li>
+            <li class="nav-item pl-3">
+                <a class="nav-link " href="/entrar">Login</a>
+            </li>
+            <li>
+                <form class="form-inline ml-3 ml-sm-0">
+                    <input class="form-control imput-size margleft" type="search" placeholder="O que você precisa?"
+                        aria-label="Pesquisar">
+                    <button class="btn btn-pesquisar ml-sm-0" type="submit">Pesquisar</button>
+                </form>
+            </li>   
+        </ul>
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item pl-3">
+                <img src="https://i.imgur.com/bA1cywY.png" alt="Imagem Usuário" width="40px">
+            </li>
+            <li class="nav-item pl-3">
+                <img class="pl-3 pr-3 " src="https://i.imgur.com/LrfId9o.png" alt="Imagem cesta" width="70px">
+            </li>
+        </ul>
+
+
     </div>
-  </nav>
+</nav>

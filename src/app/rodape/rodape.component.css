@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    .fonte-site{
+    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0)
+    }
+
+    .social-network {
+    list-style: none;
+    padding: 0;
+    }
+    
+    ul li {
+        display: inline;
+        margin: 0;
+        padding: 1em;
+        /* align-items: left; */
+    }
+    
+   .bg-laranja {
+    background-color:#f69733;
+    }
+
+    .bg-azul {
+    background-color: #8DE2E5;
+    }
+
+    i {
+    font-size: 2rem;
+    }
+
+    i:hover{
+        font-size: 2.4rem;
+        }
+
+    .fa{
+        color: #f69733;
+    }
+
+    .fa-facebook-square:hover{
+        color: #1877F2;
+    }
+    
+    .fa-instagram:hover {
+        color: #BC0058;
+    }
+    
+    .fa-linkedin-square:hover {
+        color: #005781;
+    }
+
+    .fa-github-square:hover {
+        color: #090909;
+    }
+
+    img {
+        width: 8rem;
+        height: auto;
+    }
+
+    .tamanhoMaximo {
+        max-height:100rem;
+        height:100px;
+    }
+
+    .aligDireita {
+        float: right;
+    }

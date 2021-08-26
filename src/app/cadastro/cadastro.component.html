@@ -1,0 +1,100 @@
+  <div class="container-fluid">
+
+    <div class="row">
+    
+        <div class="col-md-3" id="img-bg"></div>
+    
+        <div class="col-md-6 mt-5 mb-5">
+    
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+    
+                    <h1 class="text-center fonte-site">Cadastro</h1>
+    
+                    <div class="form-group mt-5 fonte-site">
+                        <label for="nome">Nome</label>
+                        <input class="form-control" type="text" name="nome" id="nome"
+                        placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group fonte-site">
+                        <label for="usuario">Usuário</label>
+                        <input class="form-control" type="email" name="usuario" id="usuario"
+                        placeholder="Digite seu usuário" required>
+                    </div>
+                    
+                    <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                          <label for="dataNascimento">Data de Nascimento</label>
+                          <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua data de Nascimento" required>
+                        </div>
+                      
+                        <div class="w-50">
+                          <label for="CPF">CPF</label>
+                          <input class="form-control" type="number" name="CPF" id="CPF" placeholder="Digite seu CPF" required>
+                        </div>
+                      </div>
+
+                    <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                          <label for="CEP">CEP</label>
+                          <input class="form-control" type="number" name="CEP" id="CEP" placeholder="Digite seu CEP" required>
+                        </div>
+                      
+                        <div class="w-50">
+                          <label for="numero">Número</label>
+                          <input class="form-control" type="number" name="numero" id="numero" placeholder="Digite seu número residencial" required>
+                        </div>
+                      </div>
+
+                      <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                            <label for="complemento">Complemento</label>
+                            <input class="form-control" type="complemento" name="complemento" id="complemento"
+                            placeholder="Digite seu Complemento">
+                        </div>
+                      
+                        <div class="w-50">
+                            <label for="telefone">Telefone</label>
+                            <input class="form-control" type="number" name="telefone" id="telefone"
+                            placeholder="Digite seu telefone">
+                        </div>
+                      </div>
+                   
+                    <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                          <label for="senha">Senha</label>
+                          <input class="form-control" type="text" name="senha" id="senha" placeholder="Digite o sua senha" required>
+                        </div>
+                      
+                        <div class="w-50">
+                          <label for="confirmSenha">Confirmar senha</label>
+                          <input class="form-control" type="text" name="confirmSenha" id="confirmSenha" placeholder="Digite o seu nome completo" required>
+                        </div>
+                      </div>
+    
+                    <div class="form-group fonte-site">
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form-control" name="tipo" id="tipo">
+                            <option>Selecione um tipo de usuário:</option>
+                            <option value="Vendedor">Vendedor</option>
+                            <option value="Comprador">Comprador</option>
+                            <option value="Administrador">Administrador</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group fonte-site">
+                        <label for="descricaouser">Caso seu perfil seja vendedor, descreva seu comércio:</label>
+                        <input class="form-control" type="text" name="descricaouser" id="descricaouser"
+                        placeholder="Descreva...">
+                    </div>
+    
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-danger mr-4 px-5" routerLink="/home">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-info px-5">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    </div>

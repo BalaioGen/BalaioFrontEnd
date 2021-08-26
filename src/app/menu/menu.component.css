@@ -1,16 +1,28 @@
-.menu-color{
-    background-color: #5ce1e6;
-    height: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.fonte-site{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0)
 }
 
+.menu-color{
+    background-color: #8de2e5;
+    height: 50px;
+    
+}
+.margleft{
+    margin-left: 10px;
+}
 .btn-pesquisar {
     background-color: #f69733;
-    padding: 5px 10px;
-    
-
+    padding: 1px 9px;
 }
 
 .imput-size {
-    height: 35px;
-    width: 200px;
+    height: 25px;
+    min-width: auto;
+    width:250px;
+    max-width: 350px;
+    padding-left: 35px;
 }

@@ -14,36 +14,36 @@
                     <div class="form-group mt-5 fonte-site">
                         <label for="nome">Nome</label>
                         <input class="form-control" type="text" name="nome" id="nome"
-                        placeholder="Digite seu nome" required>
+                        placeholder="Digite seu nome" required [(ngModel)]='usuario.nome'>
                     </div>
 
                     <div class="form-group fonte-site">
                         <label for="usuario">Usuário</label>
                         <input class="form-control" type="email" name="usuario" id="usuario"
-                        placeholder="Digite seu usuário" required>
+                        placeholder="Digite seu usuário" required [(ngModel)]='usuario.usuario'>
                     </div>
                     
                     <div class="form-group d-flex">
                         <div class="w-50 mr-5">
                           <label for="dataNascimento">Data de Nascimento</label>
-                          <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua data de Nascimento" required>
+                          <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua data de Nascimento" required [(ngModel)]='usuario.dataNascimento'>
                         </div>
                       
                         <div class="w-50">
                           <label for="CPF">CPF</label>
-                          <input class="form-control" type="number" name="CPF" id="CPF" placeholder="Digite seu CPF" required>
+                          <input class="form-control" type="number" name="CPF" id="CPF" placeholder="Digite seu CPF" required [(ngModel)]='usuario.cpf'>
                         </div>
                       </div>
 
                     <div class="form-group d-flex">
                         <div class="w-50 mr-5">
                           <label for="CEP">CEP</label>
-                          <input class="form-control" type="number" name="CEP" id="CEP" placeholder="Digite seu CEP" required>
+                          <input class="form-control" type="number" name="CEP" id="CEP" placeholder="Digite seu CEP" required [(ngModel)]='usuario.cep'>
                         </div>
                       
                         <div class="w-50">
                           <label for="numero">Número</label>
-                          <input class="form-control" type="number" name="numero" id="numero" placeholder="Digite seu número residencial" required>
+                          <input class="form-control" type="number" name="numero" id="numero" placeholder="Digite seu número residencial" required [(ngModel)]='usuario.numcasa'>
                         </div>
                       </div>
 
@@ -51,47 +51,56 @@
                         <div class="w-50 mr-5">
                             <label for="complemento">Complemento</label>
                             <input class="form-control" type="complemento" name="complemento" id="complemento"
-                            placeholder="Digite seu Complemento">
+                            placeholder="Digite seu Complemento" [(ngModel)]='usuario.complemento'>
                         </div>
                       
                         <div class="w-50">
                             <label for="telefone">Telefone</label>
                             <input class="form-control" type="number" name="telefone" id="telefone"
-                            placeholder="Digite seu telefone">
+                            placeholder="Digite seu telefone" [(ngModel)]='usuario.telefone'>
                         </div>
                       </div>
                    
                     <div class="form-group d-flex">
                         <div class="w-50 mr-5">
                           <label for="senha">Senha</label>
-                          <input class="form-control" type="text" name="senha" id="senha" placeholder="Digite o sua senha" required>
+                          <input class="form-control" type="text" name="senha" id="senha" placeholder="Digite o sua senha" required (input)='confirmaSenha($event)'>
                         </div>
                       
                         <div class="w-50">
                           <label for="confirmSenha">Confirmar senha</label>
-                          <input class="form-control" type="text" name="confirmSenha" id="confirmSenha" placeholder="Digite o seu nome completo" required>
+                          <input class="form-control" type="text" name="confirmSenha" id="confirmSenha" placeholder="Digite o seu nome completo" required [(ngModel)]="usuario.senha">
                         </div>
                       </div>
+                      <div class="w-50">
+                        <label for="confirmSenha">Digite seu email</label>
+                        <input class="form-control" type="email" name="emailuser" id="emailuser" placeholder="Digite aqui seu email!" required [(ngModel)]="usuario.email">
+                      </div>
+                    
     
                     <div class="form-group fonte-site">
                         <label for="tipo">Tipo de Usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select class="form-control" name="tipo" id="tipo" (change)='usuarioTipo($event)'>
                             <option>Selecione um tipo de usuário:</option>
-                            <option value="Vendedor">Vendedor</option>
-                            <option value="Comprador">Comprador</option>
-                            <option value="Administrador">Administrador</option>
+                            <option value="vendedor">Vendedor</option>
+                            <option value="comprador">Comprador</option>
+                            <option value="administrador">Administrador</option>
                         </select>
                     </div>
 
                     <div class="form-group fonte-site">
                         <label for="descricaouser">Caso seu perfil seja vendedor, descreva seu comércio:</label>
                         <input class="form-control" type="text" name="descricaouser" id="descricaouser"
-                        placeholder="Descreva...">
+                        placeholder="Descreva..." [(ngModel)]='usuario.descricaouser'>
                     </div>
+                    <div class="form-group fonte-site">
+                      <label for="descricaouser">Link da sua foto de perfil!</label>
+                      <input class="form-control" type="text" name="foto" id="foto" placeholder="Digite a url da sua foto" [(ngModel)]="usuario.foto">
+                  </div>
     
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-outline-danger mr-4 px-5" routerLink="/home">Cancelar</button>
-                        <button type="submit" class="btn btn-outline-info px-5">Cadastrar</button>
+                        <button (click)="cadastrar()" type="submit" class="btn btn-outline-info px-5">Cadastrar</button>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UsuarioLogin } from '../model/UsuarioLogin';
-import { Router } from '@angular/router';
+import { UsuarioLogin } from '../model/usuarioLogin';
+import { Observable } from 'rxjs';
+import { UsuarioModel } from '../model/usuarioModel';
+import { environment } from 'src/environments/environment.prod';
+
+
 
 
 @Injectable({
@@ -10,24 +14,24 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   constructor(
-    private http: HttpClient,
-    private router: Router,
+    private http: HttpClient
   ) { }
-}
 
-entrar(){
-  this.auth.entrar(this.usuarioLogin).subscribe((resp:UsuarioLogin)=>{
-    this.usuariolg=resp
-    // environment.token = this.usuariolg.token
-    // environment.nome = this.usuariolg.nome
-    // environment.id = this.usuariolg.id
-    // environment.foto = this.usuariolg.foto
+  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
+    return this.http.post<UsuarioLogin>("https://balaiopi.herokuapp.com/usuarios/logar", usuarioLogin)
+  }
 
-    this.router.navigate(['/inicio'])
-  },erro=>{
-    if(erro.status == 500){
-      alert("Usuario ou Senha errados!!")
+  cadastrar(usuario: UsuarioModel): Observable<UsuarioModel> {
+    return this.http.post<UsuarioModel>("https://balaiopi.herokuapp.com/usuarios/cadastrar", usuario)
+  }
+
+  logado() {
+    let ok: boolean = false
+
+    if (environment.token != "") {
+      ok = true
     }
-  })
-}
+    return ok
+  }
 
+}

@@ -9,6 +9,7 @@ export class UsuarioModel {
     public senha: string
     public telefone: number
     public tipo: string
+    public foto: string
     public usuario: string
     public cep: number
     public complemento: string

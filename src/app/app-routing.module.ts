@@ -5,6 +5,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { EntrarComponent } from './entrar/entrar.component';
 const routes: Routes = [
+  {path: '', redirectTo:'entrar', pathMatch:'full'},
   { path: 'cadastro', component: CadastroComponent },
   { path: 'home', component: HomeComponent },
   { path: 'sobre', component: SobreComponent },

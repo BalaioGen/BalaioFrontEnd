@@ -23,21 +23,24 @@
 
     .bg-azul {
     background-color: #8DE2E5;
+    padding-bottom: 0%;
     }
 
     i {
     font-size: 2rem;
     }
 
-    /* i:hover{
-        font-size: 2.4rem;
-        } */
+    i:hover{
+        color: #f69733;
+        transition: 0.2s;
+        cursor: pointer;
+        }
 
     .fa{
-        color: #f69733;
+        color: #2b2b2b;
     }
 
-    .fa-facebook-square:hover{
+    /* .fa-facebook-square:hover{
         color: #1877F2;
     }
     
@@ -51,17 +54,17 @@
 
     .fa-github-square:hover {
         color: #090909;
-    }
+    } */
 
     img {
         width: 8rem;
         height: auto;
     }
 
-    .tamanhoMaximo {
+    /* .tamanhoMaximo {
         max-height:100rem;
         height:100px;
-    }
+    } */
 
     .aligDireita {
         float: right;

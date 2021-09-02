@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 
 .fonte-site{
     font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 
 .menu-color{
     background-color: #8de2e5;
     height: 50px;
-    
+    padding: 30px 0px;
+    z-index:9; 
+    width:100%;
 }
 .margleft{
     margin-left: 10px;
@@ -18,11 +21,17 @@
     background-color: #f69733;
     padding: 1px 9px;
 }
+.fsize{
+    font-size: 0.75rem;
+}
 
-.imput-size {
+.input-size {
     height: 25px;
     min-width: auto;
     width:250px;
     max-width: 350px;
     padding-left: 35px;
+}
+.card-size{
+    min-width: 13rem !important;
 }

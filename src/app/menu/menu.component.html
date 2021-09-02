@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light menu-color fonte-site ">
+<nav class="navbar position-fixed navbar-expand-lg navbar-light menu-color fonte-site ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
@@ -7,7 +7,9 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto d-flex align-items-center">
             <li class="nav-item active">
-                <img src="https://i.imgur.com/Pk2yHqh.png" alt="Imagem logo" width="150px" height="150px">
+                <a routerLink="/home">
+                <img src="https://i.imgur.com/Pk2yHqh.png" alt="Imagem logo" width="150px" height="150px" >
+                </a>
             </li>
 
             <li class="nav-item pl-5">
@@ -31,21 +33,35 @@
                 </div>
 
             </li>
-            <li class="nav-item pl-3">
-                <a class="nav-link " href="/entrar">Login</a>
-            </li>
-            <li>
-                <form class="form-inline ml-3 ml-sm-0">
-                    <input class="form-control imput-size margleft" type="search" placeholder="O que você precisa?"
+            <!-- <li>
+                <form class="form-inline ml-3 ml-sm-0 justify-content-center">
+                    <input class="form-control input-size margleft" type="search" placeholder="O que você precisa?"
                         aria-label="Pesquisar">
                     <button class="btn btn-pesquisar ml-sm-0" type="submit">Pesquisar</button>
                 </form>
-            </li>   
+            </li>    -->
         </ul>
         <ul class="navbar-nav ml-auto d-flex align-items-center">
-            <li class="nav-item pl-3">
+            <!-- <li class="nav-item pl-3">
                 <img src="https://i.imgur.com/bA1cywY.png" alt="Imagem Usuário" width="40px">
+            </li> -->
+            
+            <li class="nav-item dropdown dropleft">
+                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://i.imgur.com/bA1cywY.png" alt="Imagem Usuário" width="40px" *ngIf='auth.deslogado()'>
+                    <img src="{{foto}}" alt="Imagem Usuário" width="40px" *ngIf='auth.logado()'>
+                </a>
+                <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
+                  <span class='p-4 text-muted fsize ' *ngIf='auth.deslogado()'>Você esta deslogado!</span>
+                  <a class="dropdown-item" routerLink='/entrar' *ngIf='auth.deslogado()'>Login</a>
+                  <a class="dropdown-item" routerLink="/cadastro" *ngIf='auth.deslogado()'>Registre-se</a>
+                  <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
+                  <a class="dropdown-item" routerLink='#' *ngIf='auth.logado()'>Carrinho</a>
+                  <a class="dropdown-item" routerLink="#" *ngIf='auth.logado()'>Perfil</a>
+                  <a class="dropdown-item" routerLink="#" *ngIf='auth.logado()' >Sair</a>
+                </div>
             </li>
+
             <li class="nav-item pl-3">
                 <img class="pl-3 pr-3 " src="https://i.imgur.com/LrfId9o.png" alt="Imagem cesta" width="70px">
             </li>

@@ -1,4 +1,4 @@
-import { ProdutoModel } from "./produtoModel"
+import { ProdutoModel } from "./ProdutoModel"
 
 export class CategoriaModel {
     public id: number

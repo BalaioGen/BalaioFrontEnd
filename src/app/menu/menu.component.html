@@ -20,16 +20,17 @@
                 <a class="nav-link m-0" routerLink='/sobre'>Sobre nós</a>
             </li>
 
-            <li class="nav-item dropdown pl-3">
+            <li class="nav-item dropdown pl-4">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                    aria-haspopup="true" aria-expanded="false" routerLink='/produtos'>
                     Produtos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Artesanato</a>
-                    <a class="dropdown-item" href="#">Frutas</a>
+                    <!-- <button class="btn btn-info mr-3" [routerLink]=['/categorias']></a> -->
+                    <a class="dropdown-item" href="#">Metais e Pedrarias</a>
                     <!-- <div class="dropdown-divider"></div> -->
-                    <a class="dropdown-item" href="#">Vegetais</a>
+                    <a class="dropdown-item" href="#">Madeiras</a>
+                    <!-- <a class="dropdown-item" routerLink='/categorias'></a> -->
                 </div>
 
             </li>
@@ -62,8 +63,17 @@
                 </div>
             </li>
 
-            <li class="nav-item pl-3">
-                <img class="pl-3 pr-3 " src="https://i.imgur.com/LrfId9o.png" alt="Imagem cesta" width="70px">
+            <li class="nav-item dropdown dropleft">
+                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="pl-3 pr-3 " src="https://i.imgur.com/LrfId9o.png" alt="Imagem cesta" width="70px"> 
+                </a>
+                <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
+                  <span class='p-4 text-muted fsize ' >Seu balaio está vazio</span>
+                  <a class="dropdown-item" routerLink="/produtos">Adicionar produtos</a>
+                  <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
+                  <a class="dropdown-item" routerLink='#' *ngIf='auth.logado()'>Carrinho</a>
+                </div>
+                
             </li>
         </ul>
 

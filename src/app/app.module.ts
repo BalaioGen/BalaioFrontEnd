@@ -11,6 +11,10 @@ import { SobreComponent } from './sobre/sobre.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { CadastroprodutoComponent } from './cadastroproduto/cadastroproduto.component';
 
 // const routes: Routes = [
 //   {path:"", redirectTo: "entrar", pathMatch:"full"},
@@ -27,7 +31,11 @@ import { FormsModule } from '@angular/forms';
     CadastroComponent,
     HomeComponent,
     SobreComponent,
-    EntrarComponent
+    EntrarComponent,
+    ProdutosComponent,
+    CategoriasComponent,
+    AlertasComponent,
+    CadastroprodutoComponent
   ],
   imports: [
     BrowserModule,

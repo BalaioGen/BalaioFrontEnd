@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+#img-bg{
+    background-image: url(https://i.imgur.com/5SMsuTQ.png);
+    margin-left: 15%;
+    min-height: 100vh;
+    border-radius: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fonte-site{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.alturasenha{
+    width: 85% !important;
+}

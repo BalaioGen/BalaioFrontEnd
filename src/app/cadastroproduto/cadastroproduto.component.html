@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+    <div class="row">
+    
+        <div class="col-md-5 ml-5" id="img-bg"></div>
+    
+        <div class="col-md-5 mt-5 mb-5">
+    
+            <div class="row d-flex justify-content-center ml-5 margemcadastro">
+                <div class="col-md-10">
+    
+                    <h1 class="text-center fonte-site mt-5">Cadastro de produto</h1>
+    
+                    <div class="form-group mt-5 fonte-site">
+                        <label for="nome">Nome do produto</label>
+                        <input class="form-control" type="text" name="nome" id="nome"
+                        placeholder="Digite seu nome"/>
+                    </div>
+
+                    <div class="w-50 mr-5">
+                    <select></select>
+                    </div>
+                    
+
+                    <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                          <label for="dataNascimento">Data de Fabricação</label>
+                          <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua data de Fabricação" [(ngModel)]="dataFrabricao"/>
+                        </div>
+                      
+                        <div class="w-50 mr-5">
+                            <label for="dataNascimento">Data de Validade(Caso tenha*)</label>
+                            <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua data de Validade"/>
+                          </div>
+                        </div>
+
+                    <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                          <label for="CEP">Descrição do seu Produto</label>
+                          <input class="form-control" type="text" name="descricao" id="descricao" placeholder="Digite sua descrição" />
+                        </div>
+                      
+                        <div class="w-50">
+                          <label for="numero">Insira o Link da foto do seu produto</label>
+                          <input class="form-control" type="text" name="foto" id="foto" placeholder="Digite seu número residencial" />
+                        </div>
+                      </div>
+
+                      <div class="form-group d-flex">
+                        <div class="w-50 mr-5">
+                            <label for="complemento">Complemento</label>
+                            <input class="form-control" type="complemento" name="complemento" id="complemento"
+                            placeholder="Digite seu Complemento" />
+                        </div>
+                      
+                        <div class="w-50">
+                            <label for="telefone">Quantidade</label>
+                            <input class="form-control" type="number" name="quantidade" id="quantidade"
+                            placeholder="Digite Quantidade do seu Produto" />
+                        </div>
+                      </div>
+                      <div class="w-50">
+                        <label for="telefone">Valor</label>
+                        <input class="form-control" type="number" name="valor" id="valor"
+                        placeholder="Digite o Preço do seu produto" />
+                    </div>
+                   
+                    <div class="d-flex justify-content-center mt-5">
+                        <button type="submit" class="btn btn-outline-danger mr-4 px-5" routerLink="/home">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-info px-5">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    </div>

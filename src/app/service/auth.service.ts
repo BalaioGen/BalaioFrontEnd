@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UsuarioLogin } from '../model/usuarioLogin';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 import { Observable } from 'rxjs';
-import { UsuarioModel } from '../model/usuarioModel';
+import { UsuarioModel } from '../model/UsuarioModel';
 import { environment } from 'src/environments/environment.prod';
 
 

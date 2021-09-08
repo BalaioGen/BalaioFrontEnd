@@ -1,0 +1,14 @@
+@import url(../../styles.css);
+
+.tamanhoimg{
+    height: auto;
+    width: 100%;
+}
+
+.alturacard{
+    height: 400px !important;
+}
+
+.rodapealtura{
+    min-height: 90vh;
+}

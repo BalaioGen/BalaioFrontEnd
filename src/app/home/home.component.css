@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&display=swap');
 @import url('../../styles.css');
+
 .size-img{
     height: 100%;
     width: 100%;
@@ -18,10 +20,14 @@
 
 
   h1 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: uppercase;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
   }
+
   
   img {
     height: auto;
@@ -83,6 +89,7 @@
   }
   
   .card_title {
+    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     padding: 15px;
     font-size: 1.1rem;
@@ -93,6 +100,7 @@
   }
   
   .card_text {
+    font-family: 'Oxygen', sans-serif;
     padding: 15px;
     color: #ffffff;
     font-size: 0.875rem;

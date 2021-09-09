@@ -1,11 +1,16 @@
 @import url('../../styles.css');
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     flex-direction: row;
+  } */
+
+  .text-box{
+    width: 70vw;
+     text-align: center;
+    /*justify-content: center;
+    align-items: center; */
   }
-
-
 
   i {
     font-size: 2rem;

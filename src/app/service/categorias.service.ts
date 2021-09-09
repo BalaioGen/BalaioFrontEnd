@@ -8,12 +8,19 @@ import { CategoriaModel } from '../model/CategoriaModel';
   providedIn: 'root'
 })
 export class CategoriasService {
-
   constructor(private http: HttpClient) { }
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
+
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
+  
 
   getAllCategorias(): Observable<CategoriaModel[]> {
     return this.http.get<CategoriaModel[]>('https://balaiopi.herokuapp.com/categorias', this.token)
@@ -29,6 +36,10 @@ export class CategoriasService {
 
   postCategoria(categoria: CategoriaModel): Observable<CategoriaModel> {
     return this.http.post<CategoriaModel>(`https://balaiopi.herokuapp.com/categorias/`, categoria, this.token)
+  }
+
+  putCategoria(categoria: CategoriaModel): Observable<CategoriaModel>{
+    return this.http.put<CategoriaModel>(`https://balaiopi.herokuapp.com/categorias/`, categoria, this.token)
   }
 
 }

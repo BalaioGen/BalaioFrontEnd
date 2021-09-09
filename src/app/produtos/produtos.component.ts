@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { ProdutoModel } from '../model/ProdutoModel';
 import { ProdutosService } from '../service/produtos.service';
 
+
 @Component({
   selector: 'app-produtos',
   templateUrl: './produtos.component.html',
@@ -23,19 +24,20 @@ export class ProdutosComponent implements OnInit {
   //     this.router.navigate(['/entrar'])
   //   }
   //   this.getAllProdutos()
-  }
+  this.getAllProdutos();  
+}
   getAllProdutos(){
     this.ProdutosService.getAllProdutos().subscribe((resp: ProdutoModel[])=>{
       this.listaProdutos = resp
     })
  }
 
- cadastrarProdutos(){
-   this.ProdutosService.postProdutos(this.produtos).subscribe((resp: ProdutoModel) => {
-     this.produtos=resp
-     alert('Produto Cadastrado com sucesso!')
-     this.getAllProdutos()
-     this.produtos = new ProdutoModel()
-   })
- }
+//  cadastrarProdutos(){
+//    this.ProdutosService.postProdutos(this.produtos).subscribe((resp: ProdutoModel) => {
+//      this.produtos=resp
+//      alert('Produto Cadastrado com sucesso!')
+//      this.getAllProdutos()
+//      this.produtos = new ProdutoModel()
+//    })
+//  }
 }

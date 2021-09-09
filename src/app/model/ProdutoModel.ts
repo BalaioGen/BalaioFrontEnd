@@ -1,3 +1,4 @@
+import { CategoriaModel } from "./CategoriaModel"
 import { UsuarioModel } from "./UsuarioModel"
 
 export class ProdutoModel {
@@ -9,4 +10,6 @@ export class ProdutoModel {
     public dataFabricacao: Date
     public dataValidade: Date
     public descricaoproduto: string
+    public fotoproduto: string
+    public categoria: CategoriaModel
 }

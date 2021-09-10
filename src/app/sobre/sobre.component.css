@@ -1,4 +1,5 @@
 @import url('../../styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&display=swap');
 /* .container {
     display: flex;
     justify-content: center;
@@ -6,8 +7,8 @@
   } */
 
   .text-box{
-    width: 70vw;
-     text-align: center;
+    max-width: 70vw;
+    text-align: center;
     /*justify-content: center;
     align-items: center; */
   }
@@ -19,6 +20,21 @@
     /* i:hover{
         font-size: 2.4rem;
         } */
+  .texto-sobre{
+    padding-top: 10rem;
+    font-size: 1.5rem;
+    padding-left: 9rem;
+  }
+
+  .espaco-foto{
+    margin-top: 5rem;
+    width: 70%;
+  }
+
+  .espaco-foto2{
+    padding-left: 10rem;
+    width: 100%;
+  }
 
   .fa{
     color: #130d07;
@@ -152,3 +168,22 @@ p {
   color: #f69733;
   ;
 }
+
+#img-bg{
+  background-image: url(https://i.imgur.com/fT9Acul.gifv);
+  margin-left: 15%;
+  min-height: 100vh;
+  border-radius: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1532px){
+  .espaco-foto2{
+    margin-top: 20vh;
+  }
+}
+
+  
+

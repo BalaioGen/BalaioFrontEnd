@@ -5,6 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse menu-color" id="navbarSupportedContent">
+    <div class="separacao">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link m-0" routerLink="/home">Home</a>
@@ -26,7 +27,7 @@
   <li>
     <div class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Você!
+        Você
       </a>
       <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
         <span class='p-4 text-muted fsize ' *ngIf='auth.deslogado()'>Você esta deslogado!</span>
@@ -42,9 +43,9 @@
 <li>
   <div class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Carrinho!
+      Carrinho
     </a>
-    <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
+    <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink">
       <span class='p-4 text-muted fsize ' >Seu balaio está vazio</span>
       <a class="dropdown-item" routerLink="/produtos">Adicionar produtos</a>
       <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
@@ -53,6 +54,7 @@
   </div>
 </li>
     </ul>
+  </div>
 
 
 

@@ -1,5 +1,17 @@
-.img-tamanho{
+.img-produto{
     width: 20rem;
     height: auto;
 }
 
+.img-icon {
+    width: 2.5rem;
+    height: auto;
+}
+
+.p-margin {
+    margin-bottom: 0;
+}
+
+.card {
+    
+}

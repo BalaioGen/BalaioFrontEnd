@@ -13,8 +13,10 @@
 
 .menu-color{
     background-color: #8de2e5;
+
+}
+.menu-altura{
     height: 70px;
-    width:100%;
 }
 .margleft{
     margin-left: 10px;
@@ -25,7 +27,9 @@
 .fsize{
     font-size: 0.75rem;
 }
-
+li:hover{
+    cursor: pointer;
+}
 .input-size {
     height: 25px;
     min-width: auto;

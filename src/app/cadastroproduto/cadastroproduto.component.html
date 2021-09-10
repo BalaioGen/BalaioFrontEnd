@@ -25,7 +25,7 @@
               <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.descricao}}</option>
             </select>
           </div>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Cadastre uma categoria</button> 
+          <button type="button" class="btn btn-primary cadastrocategoria mt-4" data-toggle="modal" data-target="#exampleModal">Cadastre uma categoria</button> 
           </div>
 
 
@@ -36,7 +36,7 @@
                 placeholder="Digite sua data de Fabricação" [(ngModel)]="produto.dataFabricacao" />
             </div>
 
-            <div class="w-50 mr-5">
+            <div class="w-50">
               <label for="dataNascimento">Data de Validade(Caso tenha*)</label>
               <input class="form-control" type="date" name="dataNascimento" id="dataNascimento"
                 placeholder="Digite sua data de Validade" [(ngModel)]="produto.dataValidade" />
@@ -73,7 +73,7 @@
 
           <div class="d-flex justify-content-center mt-5">
             <button type="submit" class="btn btn-outline-danger mr-4 px-5" routerLink="/home">Cancelar</button>
-            <button type="submit" class="btn btn-outline-info btn-success px-5" (click)='Cadastrar()'>Vender</button>
+            <button type="submit" class="btn btn-outline btn-success px-5" (click)='Cadastrar()'>Vender</button>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-primary" (click)="cadastrarcategoria()" data-dismiss="modal">Salvar</button>
       </div>
     </div>
   </div>

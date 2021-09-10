@@ -1,10 +1,10 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light menu-color fonte-site">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light menu-color fonte-site menu-altura">
   <a class="navbar-brand" href="#"><img src="https://i.imgur.com/jF1YvI7.png?1" height="50rem"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse menu-color" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link m-0" routerLink="/home">Home</a>
@@ -13,22 +13,20 @@
         <a class="nav-link m-0" routerLink='/sobre'>Sobre nós</a>
     </li>
     <li>
-      <div class="nav-item dropdown pr-3">
+      <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Produtos
         </a>
         <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
           <a class="dropdown-item" routerLink='/cadastroprod'>Cadastre Produtos</a>
-          <a class="dropdown-item" routerLink="/produtos" >Catalogo!</a>
+          <a class="dropdown-item" routerLink="/produtos" >Catalogo</a>
         </div>
       </div>
-  
   </li>
-    </ul>
-
-    <div class="nav-item dropdown pr-3">
+  <li>
+    <div class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="https://i.imgur.com/bA1cywY.png" alt="Carrinho de compras" height="50rem">
+        Você!
       </a>
       <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
         <span class='p-4 text-muted fsize ' *ngIf='auth.deslogado()'>Você esta deslogado!</span>
@@ -40,17 +38,23 @@
         <a class="dropdown-item" routerLink="#" *ngIf='auth.logado()' (click)="sair()" >Sair</a>
       </div>
     </div>
-
-    <div class="nav-item dropleft ">
-      <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="https://i.imgur.com/LrfId9o.png" alt="Carrinho de compras" height="50rem">
-      </a>
-      <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
-        <span class='p-4 text-muted fsize ' >Seu balaio está vazio</span>
-        <a class="dropdown-item" routerLink="/produtos">Adicionar produtos</a>
-        <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
-        <a class="dropdown-item" routerLink='#' *ngIf='auth.logado()'>Carrinho</a>
-      </div>
+</li>
+<li>
+  <div class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Carrinho!
+    </a>
+    <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
+      <span class='p-4 text-muted fsize ' >Seu balaio está vazio</span>
+      <a class="dropdown-item" routerLink="/produtos">Adicionar produtos</a>
+      <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
+      <a class="dropdown-item" routerLink='#' *ngIf='auth.logado()'>Carrinho</a>
     </div>
+  </div>
+</li>
+    </ul>
+
+
+
   </div>
 </nav>

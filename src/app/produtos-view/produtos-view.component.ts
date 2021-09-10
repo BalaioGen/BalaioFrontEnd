@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoModel } from '../model/ProdutoModel';
 import { ProdutosService } from '../service/produtos.service';
 
@@ -10,26 +10,27 @@ import { ProdutosService } from '../service/produtos.service';
 })
 export class ProdutosViewComponent implements OnInit {
 
-  produto: ProdutoModel = new ProdutoModel();
-  listaProdutos: ProdutoModel[]
-
+  produtos: ProdutoModel = new ProdutoModel();
   
+  // listaProdutos: ProdutoModel[];
 
   constructor(
     private produtosService: ProdutosService,
+    private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.produtosService.refreshToken()
+    
     let id = this.route.snapshot.params['id']
     
-    this.findByIdProduto(id)
+    this.findProdutoById(id)
   }
 
-  findByIdProduto(id: number){
+  findProdutoById(id: number){
     this.produtosService.getProdutosById(id).subscribe((resp: ProdutoModel) => {
-      this.produto = resp
+      this.produtos = resp
     })
   }
 

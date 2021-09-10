@@ -1,8 +1,11 @@
-<div class="container" *ngFor='let item of listaProdutos'>
+
+<div>{{produtos.id}}</div>
+
+<!-- <div class="container">
 
     <div class="align-items-center justify-content-center text-center" >
-      <img src="{{item.fotoproduto}}" class="img-tamanho">
-      <h4 class="mb-5">{{item.nomeproduto}}</h4>
+      <img src="{{produto.fotoproduto}}" class="img-tamanho">
+      <h4 class="mb-5">{{produto.nomeproduto}}</h4>
     </div>
 
     <div>
@@ -16,21 +19,21 @@
           <tbody>
             <tr>
               <th>Data de Fabricação</th>
-              <td>{{item.dataFabricacao}}</td>
+              <td>{{produto.dataFabricacao}}</td>
             </tr>
             <tr>
               <th>Data de validade</th>
-              <td>{{item.dataValidade}}</td>
+              <td>{{produto.dataValidade}}</td>
             </tr>
             <tr>
               <th>Categoria</th>
-              <td>{{item.categoria.palavraChave}}</td>
+              <td>{{produto.categoria.palavraChave}}</td>
             </tr>
             <tr>
               <th>Descrição</th>
-              <td>{{item.descricaoproduto}}</td>
+              <td>{{produto.descricaoproduto}}</td>
             </tr>
           </tbody>
         </table>
     </div>
-</div>
+</div> -->

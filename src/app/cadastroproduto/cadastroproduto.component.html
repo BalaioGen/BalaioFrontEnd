@@ -16,7 +16,7 @@
             <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome"
               [(ngModel)]="produto.nomeproduto" />
           </div>
-
+          <div class="form-group d-flex">
           <div class="w-50 mr-5">
             <label for="nome">Categoria</label>
             <select class="form-control custom-select" name="categoria" id="inputGroupSelect01" placeholder="Selecione a categoria"
@@ -24,6 +24,8 @@
               <option selected>Selecione a Categoria</option>
               <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.descricao}}</option>
             </select>
+          </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Cadastre uma categoria</button> 
           </div>
 
 
@@ -74,6 +76,37 @@
             <button type="submit" class="btn btn-outline-info btn-success px-5" (click)='Cadastrar()'>Vender</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de categoria!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="descricao">Descreva a sua categoria!</label>
+          <input [(ngModel)]='categoria.descricao' type="text" class="form-control mb-3" id="descricao" placeholder="Digite a descrição da categoria">
+          <label for="palavraChave">De um titulo a sua categoria!</label>
+          <input [(ngModel)]='categoria.palavraChave' type="text" class="form-control mb-3" id="palavraChave" placeholder="Digite o Titulo da categoria">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Seleção</label>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="true" [(ngModel)]="categoria.ativo">Ativo</option>
+            <option value="false" [(ngModel)]="categoria.ativo">Desativado</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
       </div>
     </div>
   </div>

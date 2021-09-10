@@ -35,9 +35,9 @@ export class EditProdutoComponent implements OnInit {
   
     this.produtosService.refreshToken()
     this.categoriasService.refreshToken()
-  // if(environment.token == ''){
-  //   this.router.navigate(['/entrar'])
-  // }
+  if(environment.token == ''){
+    this.router.navigate(['/entrar'])
+  }
 
   let id = this.route.snapshot.params['id']
   this.findByIdProduto(id)

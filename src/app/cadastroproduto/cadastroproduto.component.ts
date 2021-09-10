@@ -23,6 +23,7 @@ export class CadastroprodutoComponent implements OnInit {
   idUsuario = environment.id
 
 
+
   constructor(private produtoService: ProdutosService,
     private router: Router,
     private categoriasService: CategoriasService) {
@@ -74,4 +75,14 @@ export class CadastroprodutoComponent implements OnInit {
       this.categoria = resp
     })
   }
+  cadastrarcategoria() {
+    this.categoriasService.postCategoria(this.categoria).subscribe((resp: CategoriaModel) => {
+      this.categoria = resp
+      alert("Categoria Cadastrada com sucesso")
+      this.findAllCategorias()
+      this.categoria = new CategoriaModel()
+
+    })
+  }
+
 }

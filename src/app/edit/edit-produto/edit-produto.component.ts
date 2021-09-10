@@ -33,7 +33,8 @@ export class EditProdutoComponent implements OnInit {
 
     window.scroll(0,0)
   
-
+    this.produtosService.refreshToken()
+    this.categoriasService.refreshToken()
   // if(environment.token == ''){
   //   this.router.navigate(['/entrar'])
   // }
@@ -41,7 +42,7 @@ export class EditProdutoComponent implements OnInit {
   let id = this.route.snapshot.params['id']
   this.findByIdProduto(id)
   this.findAllCategorias()
-  
+ 
 
 }
 

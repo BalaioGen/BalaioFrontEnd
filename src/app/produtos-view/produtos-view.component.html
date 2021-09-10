@@ -1,31 +1,36 @@
-<div class="container">
+<div class="container" *ngFor='let item of listaProdutos'>
 
-    <img >
+    <div class="align-items-center justify-content-center text-center" >
+      <img src="{{item.fotoproduto}}" class="img-tamanho">
+      <h4 class="mb-5">{{item.nomeproduto}}</h4>
+    </div>
 
-
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col" colspan="2">Características Principais</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-        </tbody>
-      </table>
+    <div>
+      <table class="table">
+          <thead>
+            <tr>
+            <th scope="col" colspan="2">Características principais:</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr>
+              <th>Data de Fabricação</th>
+              <td>{{item.dataFabricacao}}</td>
+            </tr>
+            <tr>
+              <th>Data de validade</th>
+              <td>{{item.dataValidade}}</td>
+            </tr>
+            <tr>
+              <th>Categoria</th>
+              <td>{{item.categoria.palavraChave}}</td>
+            </tr>
+            <tr>
+              <th>Descrição</th>
+              <td>{{item.descricaoproduto}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 </div>

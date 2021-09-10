@@ -26,7 +26,7 @@ export class ProdutosService {
   }
 
   getProdutosById(id: number) : Observable<ProdutoModel>{
-    return this.http.get<ProdutoModel>(`https://balaiopi.herokuapp.com/produtos/${id}`)
+    return this.http.get<ProdutoModel>(`https://balaiopi.herokuapp.com/produtos/${id}`, this.token)
   }
 
   getProdutosByNome(nomeproduto: string) : Observable<ProdutoModel[]>{

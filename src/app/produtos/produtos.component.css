@@ -3,11 +3,12 @@
 .tamanhoimg{
     height: 220px;
     width: 100%;
+    max-height: 220px;
 }
 
 .alturacard{
-    height: 343 !important;
-    width: 240 !important;
+    height: 343px !important;
+    width: 240px !important;
 }
 
 .rodapealtura{
@@ -27,3 +28,9 @@
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer
 }
+
+.button2 {
+    background-color: #f69733;
+    font-weight: bold;
+}
+

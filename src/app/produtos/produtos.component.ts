@@ -33,6 +33,7 @@ export class ProdutosComponent implements OnInit {
     //   }
     //   this.getAllProdutos()
     this.getAllProdutos();
+    console.log(environment.tipo)
     
   }
   getAllProdutos() {

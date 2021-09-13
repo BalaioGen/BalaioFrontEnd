@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CategoriaModel } from '../model/CategoriaModel';
 import { ProdutoModel } from '../model/ProdutoModel';
+import { AuthService } from '../service/auth.service';
 import { CategoriasService } from '../service/categorias.service';
 import { ProdutosService } from '../service/produtos.service';
 
@@ -22,7 +23,8 @@ export class ProdutosComponent implements OnInit {
   constructor(
     private router: Router,
     private ProdutosService: ProdutosService,
-    private ctagoriasService: CategoriasService
+    private categoriasService: CategoriasService,
+    public auth: AuthService
   ) { }
 
   ngOnInit() {
@@ -31,29 +33,20 @@ export class ProdutosComponent implements OnInit {
     //   }
     //   this.getAllProdutos()
     this.getAllProdutos();
+    
   }
   getAllProdutos() {
     this.ProdutosService.getAllProdutos().subscribe((resp: ProdutoModel[]) => {
       this.listaProdutos = resp
+      console.log(this.listaProdutos)
     })
   }
 
   getCategoriaById(id: number) {
-    this.ctagoriasService.getCategoriasById(id).subscribe((resp: CategoriaModel) => {
+    this.categoriasService.getCategoriasById(id).subscribe((resp: CategoriaModel) => {
       this.categoria = resp
       console.log(this.categoria)
     })
 
   }
-
-
-
-  //  cadastrarProdutos(){
-  //    this.ProdutosService.postProdutos(this.produtos).subscribe((resp: ProdutoModel) => {
-  //      this.produtos=resp
-  //      alert('Produto Cadastrado com sucesso!')
-  //      this.getAllProdutos()
-  //      this.produtos = new ProdutoModel()
-  //    })
-  //  }
 }

@@ -6,12 +6,13 @@
     font-weight: 600;
     min-width:100%;
     padding:0;
+    height:70px
 }
 .menu-color{
     background-color: #8de2e5;
 }
 .separacao{
-    padding-left: 27%;
+    padding-left: 30%;
 }
 .margleft{
     margin-left: 10px;
@@ -27,4 +28,11 @@ li:hover{
 }
 .card-size{
     min-width: 13rem !important;
+}
+@media(max-width:992px){
+    .separacao{ 
+        padding-left: 0%;
+    }
+    
+
 }

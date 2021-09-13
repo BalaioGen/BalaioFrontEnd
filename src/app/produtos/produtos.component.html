@@ -12,7 +12,7 @@
       <a class="nav-link" href="#">Consumíveis</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Disabled</a>
+      <a class="nav-link" href="#">Metais</a>
     </li>
   </ul>
 
@@ -24,10 +24,10 @@
         <div class="card-body text-center p-3">
           <h5 class="card-title">{{item.nomeproduto}}</h5>
           <p class="card-text m-0">{{item.valor | currency}}</p>
-          <p class="card-text"> <small>Categoria: {{item.categoria}}</small></p>
+          <p class="card-text"> <small>Categoria: {{item.categoria.descricao}}</small></p>
           <div class="d-flex justify-content-center">
-            <button class="btn btn-danger mr-4" [routerLink]="['/produto-delete', item.id]">Excluir</button>
-            <button class="btn btn-success" [routerLink]="['/produto-edit', item.id]">Editar</button>
+            <button class="btn btn-danger mr-4" [routerLink]="['/produto-delete', item.id]" *ngIf='auth.useradm()'>Excluir</button>
+            <button class="btn btn-success" [routerLink]="['/produto-edit', item.id]"  *ngIf='auth.useradm()' >Editar</button>
           </div>
           <!-- <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-3" href="">Editar</a> -->
             <!-- <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]" >Apagar</button> -->

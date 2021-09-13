@@ -31,7 +31,7 @@
                       
                         <div class="w-50">
                           <label for="CPF">CPF</label>
-                          <input class="form-control" type="number" name="CPF" id="CPF" placeholder="Digite seu CPF" required [(ngModel)]='usuario.cpf'>
+                          <input class="form-control" type="number" name="cpf" id="cpf" placeholder="Digite seu CPF" required [(ngModel)]='usuario.cpf'>                        
                         </div>
                       </div>
 
@@ -64,12 +64,12 @@
                     <div class="form-group d-flex">
                         <div class="w-50 mr-5">
                           <label for="senha">Senha</label>
-                          <input class="form-control" type="text" name="senha" id="senha" placeholder="Digite o sua senha" required (input)='confirmaSenha($event)'>
+                          <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite o sua senha" required (input)='confirmaSenha($event)'>
                         </div>
                       
                         <div class="w-50">
                           <label for="confirmSenha">Confirmar senha</label>
-                          <input class="form-control" type="text" name="confirmSenha" id="confirmSenha" placeholder="Digite o seu nome completo" required [(ngModel)]="usuario.senha">
+                          <input class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Digite o seu nome completo" required [(ngModel)]="usuario.senha">
                         </div>
                       </div>
                       <div class="w-50">

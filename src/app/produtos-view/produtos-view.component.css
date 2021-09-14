@@ -4,7 +4,7 @@
 }
 
 .img-icon {
-    width: 2.5rem;
+    width: 3rem;
     height: auto;
 }
 
@@ -12,6 +12,25 @@
     margin-bottom: 0;
 }
 
-.card {
-    
+.borda{
+    margin: 1rem;
+    border: 1px solid #DFDFDF;
+    padding-bottom: 4rem;
 }
+
+.card{
+    border-radius: 3%;
+}
+
+li {
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
+
+.card-text{
+    text-transform: lowercase;
+}
+

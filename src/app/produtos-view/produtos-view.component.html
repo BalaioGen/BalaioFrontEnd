@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex justify-content-center espaco">
+<div class="container d-flex justify-content-center align-items-center espaco borda">
   
   <!-- imagem -->
   <div class="col-md-7">
@@ -6,6 +6,30 @@
       <img src="{{produtos.fotoproduto}}" class="img-produto mb-2">
       <h4 class="mb-5">{{produtos.nomeproduto}}</h4>
     </div>
+
+    <!-- tabela -->
+    <table class="table">
+      <thead>
+        <th>
+          <tr scope="col" colspan="2" >Características principais:</tr>
+        </th>
+      </thead>
+  
+      <tbody>
+        <tr>
+          <th>Data de Fabricação</th>
+          <td>{{produtos.dataFabricacao | date:'dd/MM/yyyy'}}</td>
+        </tr>
+        <tr>
+          <th>Data de Validade</th>
+          <td>{{produtos.dataValidade | date:'dd/MM/yyyy'}}</td>
+        </tr>
+        <tr>
+          <th>Categoria</th>
+          <td>{{produtos.categoria.palavraChave}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- card com preço e botão comprar -->
@@ -21,45 +45,41 @@
         <p class="text-center">Unidades disponíveis: {{produtos.quantidade}}</p>
         <hr>
         <!-- colocar aqui as informações da pessoa que cadastrou o produto -->
-        <h6>Informações sobre o(a) anunciante</h6>
-        <span>LEMBRAR DE INSERIR OS DADOS DO VENDEDOR AQUI!</span>
-        <p>Nome</p>
-        <p>e-mail</p>
-        <p>Localização</p>
+        <h6>Informações do(a) anunciante</h6>
+        
+        <ul>Nome
+          <li>{{produtos.usuario.nome}}</li>
+        </ul>
+
+        <ul>e-mail
+          <li>{{produtos.usuario.email}}</li>
+        </ul>
+
+        <ul>CEP
+          <li>{{produtos.usuario.cep}}</li>
+        </ul>
         
         <hr>
         <h6>Meios de pagamento</h6>
-        <p class="p-margin"><img src="https://i.imgur.com/4IT7PPe.png" alt="Boleto Bancário" class="img-icon mr-2">Boleto bancário</p>
-        <p class="p-margin"><img src="https://i.imgur.com/ZY5rTMb.png" alt="Cartão de crédito" class="img-icon mr-2">Cartões de crédito</p>
-        <p class="p-margin"><img src="https://i.imgur.com/xQZcroo.png" alt="pix" class="img-icon mr-2">Pix</p>
+        
+        <ul class="p-margin">Cartões de Crédito
+          <li>
+            <img src="https://i.imgur.com/ZY5rTMb.png" alt="Cartão de crédito 1" class="img-icon mb-3 mr-3">
+            <img src="https://i.imgur.com/3RtkLPG.png" alt="Cartão de crédito 2" class="img-icon mb-3 mr-3">
+            <img src="https://i.imgur.com/Urorf2N.png" alt="Cartão de crédito 3" class="img-icon mb-3 mr-3">
+            <img src="https://i.imgur.com/JIfxpLT.png" alt="Cartão de crédito 3" class="img-icon mb-3">
+          </li>
+        </ul>
+        
+        <ul class="p-margin">Boleto bancário
+          <li><img src="https://i.imgur.com/4IT7PPe.png" alt="Boleto Bancário" class="img-icon mb-3">
+        </ul>
+
+        <ul class="p-margin">Pix
+          <li><img src="https://i.imgur.com/DEY3ui6.png" alt="pix" class="img-icon mb-3">
+        </ul>
+
       </div>
     </div>
   </div>
-</div>
-
-
-<!-- tabela   -->
-<div class="container">
-  <table class="table">
-    <thead>
-      <th>
-        <tr scope="col" colspan="2">Características principais:</tr>
-      </th>
-    </thead>
-
-    <tbody>
-      <tr>
-        <th>Data de Fabricação</th>
-        <td>{{produtos.dataFabricacao | date:'dd/MM/yyyy'}}</td>
-      </tr>
-      <tr>
-        <th>Data de Validade</th>
-        <td>{{produtos.dataValidade | date:'dd/MM/yyyy'}}</td>
-      </tr>
-      <tr>
-        <th>Categoria</th>
-        <td>{{produtos.categoria.palavraChave}}</td>
-      </tr>
-    </tbody>
-  </table>
 </div>

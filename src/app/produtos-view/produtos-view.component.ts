@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoModel } from '../model/ProdutoModel';
+import { UsuarioModel } from '../model/UsuarioModel';
 import { ProdutosService } from '../service/produtos.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { ProdutosService } from '../service/produtos.service';
 export class ProdutosViewComponent implements OnInit {
 
   produtos: ProdutoModel = new ProdutoModel();
-  
+  listaUsuarios: UsuarioModel[]
   // listaProdutos: ProdutoModel[];
 
   constructor(

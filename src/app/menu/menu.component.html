@@ -13,42 +13,57 @@
     <li class="nav-item">
         <a class="nav-link m-0" routerLink='/sobre'>Sobre nós</a>
     </li>
+    
     <li>
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Produtos
         </a>
         <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
-          <a class="dropdown-item" routerLink='/cadastroprod'>Cadastre Produtos</a>
-          <a class="dropdown-item" routerLink="/produtos" >Catalogo</a>
+          <!-- <a class="dropdown-item" routerLink='/cadastroprod'>Cadastre Produtos</a> -->
+          <a class="dropdown-item" routerLink="/produtos" >Catálogo</a>
         </div>
       </div>
   </li>
+
   <li>
     <div class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Você
+        Vender
       </a>
       <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
-        <span class='p-4 text-muted fsize ' *ngIf='auth.deslogado()'>Você esta deslogado!</span>
+        <a class="dropdown-item" routerLink='/cadastroprod'>Cadastre Produtos</a>
+        <!-- <a class="dropdown-item" routerLink="/produtos" >Catalogo</a> -->
+      </div>
+    </div>
+</li>
+  
+  <li>
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Perfil
+      </a>
+      <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
+        <span class='p-4 text-muted fsize ' *ngIf='auth.deslogado()'>Você está deslogado!</span>
         <a class="dropdown-item" routerLink='/entrar' *ngIf='auth.deslogado()'>Login</a>
         <a class="dropdown-item" routerLink="/cadastro" *ngIf='auth.deslogado()'>Registre-se</a>
-        <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
+        <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você está logado!</span>
         <a class="dropdown-item" routerLink="#" *ngIf='auth.logado()'>Perfil</a>
         <a class="dropdown-item" routerLink="#" *ngIf='auth.logado()' (click)="sair()" >Sair</a>
       </div>
     </div>
 </li>
+
 <li>
   <div class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Carrinho
+     Seu Balaio
     </a>
     <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink">
-      <span class='p-4 text-muted fsize ' >Seu balaio está vazio</span>
+      <span class='p-4 text-muted fsize ' >Seu Balaio está vazio!</span>
       <a class="dropdown-item" routerLink="/produtos">Adicionar produtos</a>
-      <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você esta logado!</span>
-      <a class="dropdown-item" routerLink='#' *ngIf='auth.logado()'>Carrinho</a>
+      <span class='p-4 text-muted fsize ' *ngIf='auth.logado()'>Você está logado!</span>
+      <a class="dropdown-item" routerLink='#' *ngIf='auth.logado()'>Balaio</a>
     </div>
   </div>
 </li>

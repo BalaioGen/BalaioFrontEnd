@@ -1,6 +1,5 @@
-<div class="container espaco rodapealtura">
-
-  <!-- links abaixo do menu -->
+ <div class="container espaco rodapealtura">
+<!--
   <ul class="nav justify-content-center">
     <li class="nav-item">
       <a class="nav-link active" href="#">Artesanato</a>
@@ -14,17 +13,17 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Metais</a>
     </li>
-  </ul>
+  </ul> -->
 
   <!-- cards para anuncio dos produtos -->
-  <div class="row row-cols-1 row-cols-md-3 g-4 mt-5" >
-    <div class="col-md-3" *ngFor="let item of listaProdutos">
-      <div class="card alturacard mb-3" [routerLink]="['/produtos-view', item.id]">
+  <div class="row" >
+    <div class="col algn" *ngFor="let item of listaProdutos">
+      <div class="card alturacard mb-3"  [routerLink]="['/produtos-view', item.id]">
         <img src="{{item.fotoproduto}}" class="card-img-top tamanhoimg" alt="Foto do protudo">
         <div class="card-body text-center p-3">
-          <h5 class="card-title">{{item.nomeproduto}}</h5>
-          <p class="card-text m-0">{{item.valor | currency}}</p>
-          <p class="card-text"> <small>Categoria: {{item.categoria.descricao}}</small></p>
+          <h5 class="card-title fonte-titulo">{{item.nomeproduto}}</h5>
+          <p class="card-text m-0 fonte-preco">{{item.valor | currency}}</p>
+          <p class="card-text fonte-categoria"> <small>Categoria: {{item.categoria.descricao}}</small></p>
           <div class="d-flex justify-content-center">
             <button class="btn btn-danger mr-2" [routerLink]="['/produto-delete', item.id]" *ngIf='auth.logado()'>Excluir</button>
             <button class="btn btn-success mr-2" [routerLink]="['/produto-edit', item.id]"  *ngIf='auth.logado()'>Editar</button>

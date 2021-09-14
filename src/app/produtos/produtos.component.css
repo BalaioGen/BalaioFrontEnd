@@ -49,8 +49,8 @@
     
 }
 
-/* @media screen and (max-width:539) {
-    .algn{
-        align-items: center;
+@media (max-width:539px) {
+    .col.algn{
+        padding-left:4.25rem;
     }
-} */
+}

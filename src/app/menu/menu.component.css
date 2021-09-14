@@ -36,3 +36,11 @@ li:hover{
     
 
 }
+
+@media(max-width:400px){
+    .fonte-site{ 
+        min-width:100%;
+    }
+    
+
+}

@@ -1,13 +1,13 @@
 @import url('../../styles.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&display=swap');
-/* .container {
+.container {
     display: flex;
     justify-content: center;
     flex-direction: row;
-  } */
+  } 
 
   .text-box{
-    max-width: 70vw;
+    /* max-width: 70vw; */
     text-align: center;
     /*justify-content: center;
     align-items: center; */
@@ -17,19 +17,14 @@
     font-size: 2rem;
     }
 
-    /* i:hover{
+    i:hover{
         font-size: 2.4rem;
-        } */
-  .texto-sobre{
-    padding-top: 10rem;
+        }
+ .texto-sobre{
+    padding-top: 5rem;
     font-size: 1.5rem;
-    padding-left: 9rem;
   }
 
-  .espaco-foto{
-    margin-top: 5rem;
-    width: 70%;
-  }
 
   .espaco-foto2{
     padding-left: 10rem;
@@ -93,7 +88,7 @@ h1.heading {
   }
 } 
 .card {
-  display: block; 
+    display: block; 
     margin-bottom: 20px;
     line-height: 1.42857143;
     background-color: #fff;
@@ -101,6 +96,7 @@ h1.heading {
     transition: box-shadow .25s; 
     border-top-right-radius: 45.9%;
     border-top-left-radius: 45.9%;
+    height: 457px;
     
 
 }
@@ -185,5 +181,9 @@ p {
   }
 }
 
-  
+  @media(max-width:990px){
+    .texto-sobre{
+      padding-top: 0px;
+    }
+  }
 

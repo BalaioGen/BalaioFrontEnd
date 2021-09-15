@@ -7,7 +7,6 @@
 }
 
 .alturacard{
-    height: 420px !important;
     width: 240px !important;
 }
 
@@ -49,8 +48,24 @@
     
 }
 
-@media (max-width:539px) {
+@media (max-width:540px) {
     .col.algn{
-        padding-left:4.25rem;
+        padding-left:8.25rem;
+    }
+}
+
+@media (max-width:450px) {
+    .col.algn{
+        padding-left:6.25rem;
+    }
+}
+@media (max-width:400px) {
+    .col.algn{
+        padding-left:4rem;
+    }
+}
+@media (max-width:335px) {
+    .col.algn{
+        padding-left:2.5rem;
     }
 }

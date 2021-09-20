@@ -1,27 +1,22 @@
-# BalaioFront
+<img src="https://i.imgur.com/jF1YvI7.png?1">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
+<h1 align="center"> Balaio E-commerce </h1>
 
-## Development server
+<p align="center"> Baseado no Objetivo 11 de Desenvolvimento Sustentável da ONU, o Balaio nasceu com os intuito de apoiar as relações econômicas, sociais e ambientais positivas entre as áreas urbanas, peri-urbanas e rurais, reforçando o planejamento nacional e regional de desenvolvimento. </p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<img src="https://i.imgur.com/bEWXNyE.png">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p align="center"> 
+  <a href="#sobre">Sobre</a>
+  <a href="#tecnologia">Tecnologias</a>
+  <a href="#clientes">Público Alvo</a>
+  
+  # Sobre
+  
+  
+<p align="center"> Através de um e-commerce simples e intuitivo, os comerciantes e produtores das zonas rurais poderão fazer com que os seus produtos cheguem às cidades com facilidade, gerando empregos, movimentando a economia da sua comunidade, tornando-a sustentável e com possibilidade de crescimento. Dessa forma a interação entre cidade e zona rural torna-se necessária para o desenvolvimento de ambas. Não somente no âmbito econômico, mas também cultural e social. </p>
 
-## Build
+# Tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<img src="https://i.imgur.com/yNPbmgq.jpg" width="400px" height="400px"/>

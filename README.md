@@ -19,7 +19,4 @@
 
 # Tecnologias
 
-<img src="https://i.imgur.com/VNIEEZW.png">
-<img src="https://i.imgur.com/ismel7D.png">
-<img src="https://i.imgur.com/vULijU9.png">
-<img src="https://i.imgur.com/tdMUgnm.png">
+<img src="https://i.imgur.com/yNPbmgq.jpg">

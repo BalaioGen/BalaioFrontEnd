@@ -10,13 +10,17 @@
 <p align="center"> 
   <a href="#sobre">Sobre</a>
   <a href="#tecnologia">Tecnologias</a>
-  <a href="#clientes">Público Alvo</a>
+  <a href="#publicoalvo">Público Alvo</a>
+</p>
   
-  # Sobre
-  
+  # Sobre  
   
 <p align="center"> Através de um e-commerce simples e intuitivo, os comerciantes e produtores das zonas rurais poderão fazer com que os seus produtos cheguem às cidades com facilidade, gerando empregos, movimentando a economia da sua comunidade, tornando-a sustentável e com possibilidade de crescimento. Dessa forma a interação entre cidade e zona rural torna-se necessária para o desenvolvimento de ambas. Não somente no âmbito econômico, mas também cultural e social. </p>
 
 # Tecnologias
 
 <img src="https://i.imgur.com/yNPbmgq.jpg" width="400px" height="400px"/>
+
+# Público Alvo
+
+<p align="center"> Pequenos e médios produtores de produtos orgânicos e/ou sustentáveis com acesso a internet e consumidores engajados com questões ambientais, que buscam preços acessíveis e praticidade na busca por produtos orgânicos/sustentáveis. </p>

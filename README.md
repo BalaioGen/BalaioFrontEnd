@@ -6,7 +6,6 @@
 
 <p align="center"> Baseado no Objetivo 11 de Desenvolvimento Sustentável da ONU, o Balaio nasceu com os intuito de apoiar as relações econômicas, sociais e ambientais positivas entre as áreas urbanas, peri-urbanas e rurais, reforçando o planejamento nacional e regional de desenvolvimento. </p>
 
-
 <img src="https://i.imgur.com/bEWXNyE.png">
 
 # Sobre  

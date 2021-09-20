@@ -25,7 +25,8 @@
               <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.descricao}}</option>
             </select>
           </div>
-          <button type="button" class="btn btn-primary cadastrocategoria mt-4" data-toggle="modal" data-target="#exampleModal">Cadastre uma categoria</button> 
+          <button type="button" class="btn btn-primary cadastrocategoria mt-4 mr-3" data-toggle="modal" data-target="#exampleModal">Cadastre uma categoria</button>
+          <button type="button" class="btn btn-primary cadastrocategoria mt-4" data-toggle="modal" data-target="#modalEdit">Edite uma categoria</button>
           </div>
 
 
@@ -81,11 +82,12 @@
   </div>
 </div>
 
+<!--modal cadastre categoria -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastro de categoria!</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro de categoria</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -110,4 +112,39 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+
+
+<!--modal edit categoria -->
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edite uma categoria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="descricao">Descreva a sua categoria!</label>
+          <input [(ngModel)]='categoria.descricao' type="text" class="form-control mb-3" id="descricao" placeholder="Digite a descrição da categoria">
+          <label for="palavraChave">De um titulo a sua categoria!</label>
+          <input [(ngModel)]='categoria.palavraChave' type="text" class="form-control mb-3" id="palavraChave" placeholder="Digite o Titulo da categoria">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Seleção</label>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="true" [(ngModel)]="categoria.ativo">Ativo</option>
+            <option value="false" [(ngModel)]="categoria.ativo">Desativado</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" (click)="cadastrarcategoria()" data-dismiss="modal">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

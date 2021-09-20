@@ -3,12 +3,12 @@
   <!-- imagem -->
   <div class="col justify-content-center align-items-center">
     <div class="align-items-center justify-content-center text-center">
-      <img src="{{produtos.fotoproduto}}" class="img-produto mb-2">
-      <h4 class="mb-5">{{produtos.nomeproduto}}</h4>
+      <img src="{{produtos.fotoproduto}}" class="img-produto mb-5">
+      <!-- <h4 class="mb-5">{{produtos.nomeproduto}}</h4> -->
     </div>
 
     <!-- tabela -->
-    <table class="table">
+    <table class="table fonte-descricao">
       <thead>
         <th>
           <tr scope="col" colspan="2" >Características principais:</tr>
@@ -36,13 +36,13 @@
   <div class="col-md-5 justify-content-center align-items-center mb-5">
     <div class="card" style="width: 28rem;">
       <div class="card-body">
-        <h4 class="card-title">{{produtos.nomeproduto}}</h4>
-        <h5>{{produtos.valor | currency}}</h5>
-        <p class="card-text">{{produtos.descricaoproduto}}</p>
-        <button type="button" href="#" class="btn btn-primary btn-block">Adicionar ao Balaio</button>
-        <button type="button" href="#" class="btn btn-outline-primary btn-block" routerLink='/produtos'>Continuar comprando</button>
+        <h4 class="card-title fonte-titulo">{{produtos.nomeproduto}}</h4>
+        <h5 class="preco mb-4">{{produtos.valor | currency}}</h5>
+        <p class="card-text fonte-descricao">{{produtos.descricaoproduto}}</p>
+        <button type="button" href="#" class="btn botao-adicionar btn-block fonte-titulo">Adicionar ao Balaio</button>
+        <button type="button" href="#" class="btn btn-outline-info btn-block fonte-titulo" routerLink='/produtos'>Continuar comprando</button>
         <hr>
-        <p class="text-center">Unidades disponíveis: {{produtos.quantidade}}</p>
+        <p class="text-center fonte-descricao">Disponibilidade: {{produtos.quantidade}}</p>
         <hr>
         <!-- colocar aqui as informações da pessoa que cadastrou o produto -->
         <h6>Informações do(a) anunciante</h6>

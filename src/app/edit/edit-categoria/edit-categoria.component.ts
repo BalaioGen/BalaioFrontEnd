@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CategoriaModel } from 'src/app/model/CategoriaModel';
+import { CategoriasService } from 'src/app/service/categorias.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-edit-categoria',
@@ -7,9 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditCategoriaComponent implements OnInit {
 
-  constructor() { }
+  categoria: CategoriaModel = new CategoriaModel()
 
-  ngOnInit(): void {
+  constructor(
+    private categoriasService : CategoriasService,
+    private router: Router,
+    private route: ActivatedRoute,
+    ) { }
+
+  ngOnInit() {
+    
+    if(environment.token == ''){
+      this.router.navigate(['/entrar'])
+    }
+  }
+
+  findByIdCategoria(id:number){
+    this.categoriasService.getCategoriasById(id).subscribe()
+  }
+  
+  atualizar(){
+    this.categoriasService.putCategoria(this.categoria).subscribe((resp: CategoriaModel)=>{
+      this.categoria = resp
+      alert('Categoria atualizada com sucesso!')
+      this.router.navigate(['/categorias'])
+    })
   }
 
 }

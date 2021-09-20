@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&display=swap');
+
 .img-produto{
     width: 20rem;
     height: auto;
@@ -32,5 +34,30 @@ ul{
 
 .card-text{
     text-transform: lowercase;
+    
 }
 
+.fonte-titulo{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fonte-descricao{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.preco{
+    color: #f69733;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.botao-adicionar{
+    background-color: #f69733;
+    color: #ffffff
+}
+
+.botao-adicionar:hover{
+    color: #fff3e6;
+    background-color: #fd8421;
+    transition: 0.2s;
+}

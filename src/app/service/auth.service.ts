@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { Observable } from 'rxjs';
 import { UsuarioModel } from '../model/UsuarioModel';
@@ -13,8 +13,20 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class AuthService {
 
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
+  usuariologado = environment.id;
+
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
   ) { }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
@@ -23,6 +35,14 @@ export class AuthService {
 
   cadastrar(usuario: UsuarioModel): Observable<UsuarioModel> {
     return this.http.post<UsuarioModel>("https://balaiopi.herokuapp.com/usuarios/cadastrar", usuario)
+  }
+
+  editlogado(usuario:UsuarioModel):Observable<UsuarioModel>{
+    return this.http.put<UsuarioModel>(`​https://balaiopi.herokuapp.com/usuarios​/alterar`,usuario, this.token)
+  }
+
+  getuserlogado(id:number):Observable<UsuarioModel>{
+    return this.http.get<UsuarioModel>(`https://balaiopi.herokuapp.com/usuarios/${id}`,this.token)
   }
 
   logado() {

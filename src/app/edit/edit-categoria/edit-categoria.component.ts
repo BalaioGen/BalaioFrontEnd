@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriaModel } from 'src/app/model/CategoriaModel';
+import { ProdutoModel } from 'src/app/model/ProdutoModel';
 import { CategoriasService } from 'src/app/service/categorias.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -11,7 +12,10 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class EditCategoriaComponent implements OnInit {
 
+  produto: ProdutoModel = new ProdutoModel()
+
   categoria: CategoriaModel = new CategoriaModel()
+  idCat: number
 
   constructor(
     private categoriasService : CategoriasService,
@@ -31,10 +35,13 @@ export class EditCategoriaComponent implements OnInit {
   }
   
   atualizar(){
+    this.categoria.id = this.idCat
+    this.produto.categoria = this.categoria
+
     this.categoriasService.putCategoria(this.categoria).subscribe((resp: CategoriaModel)=>{
       this.categoria = resp
       alert('Categoria atualizada com sucesso!')
-      this.router.navigate(['/categorias'])
+      this.router.navigate(['/home'])
     })
   }
 

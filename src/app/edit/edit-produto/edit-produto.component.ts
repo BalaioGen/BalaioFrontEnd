@@ -70,7 +70,7 @@ atualizar(){
 
   this.produtosService.putProdutos(this.produto).subscribe((resp: ProdutoModel) => {
     this.produto = resp
-    this.alertas.showAlertSuccess('Postagem atualizada com sucesso!')
+    this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
     this.router.navigate(['/produtos'])
   })
 }

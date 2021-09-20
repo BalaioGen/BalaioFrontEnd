@@ -128,21 +128,19 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label for="descricao">Descreva a sua categoria!</label>
-          <input [(ngModel)]='categoria.descricao' type="text" class="form-control mb-3" id="descricao" placeholder="Digite a descrição da categoria">
-          <label for="palavraChave">De um titulo a sua categoria!</label>
-          <input [(ngModel)]='categoria.palavraChave' type="text" class="form-control mb-3" id="palavraChave" placeholder="Digite o Titulo da categoria">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Seleção</label>
-          <select class="custom-select" id="inputGroupSelect01">
-            <option value="true" [(ngModel)]="categoria.ativo">Ativo</option>
-            <option value="false" [(ngModel)]="categoria.ativo">Desativado</option>
+          <label for="descricao">Escolha uma Categoria!</label>
+          <select  class="form-control custom-select mb-3" name="categorias" id="selectcatedoria">
+            <option selected>Selecione a Categoria</option>
+            <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.descricao}}</option>
           </select>
-        </div>
+          
+
+          <label for="palavraChave">Digite as alterações da categoria</label>
+          <input [(ngModel)]='categoria.palavraChave' type="text" class="form-control mb-3" id="palavraChave" placeholder="Digite as alterações">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" (click)="cadastrarcategoria()" data-dismiss="modal">Salvar</button>
+        <button type="button" class="btn btn-primary" (click)="atualizarcategoria()" data-dismiss="modal">Salvar</button>
       </div>
     </div>
   </div>

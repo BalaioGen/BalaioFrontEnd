@@ -11,3 +11,8 @@
   <a href="#sobre">Sobre</a>
   <a href="#tecnologia">Tecnologia</a>
   <a href="#clientes">Público Alvo</a>
+  
+  # Sobre
+  
+  
+<p align="center"> Através de um e-commerce simples e intuitivo, os comerciantes e produtores das zonas rurais poderão fazer com que os seus produtos cheguem às cidades com facilidade, gerando empregos, movimentando a economia da sua comunidade, tornando-a sustentável e com possibilidade de crescimento. Dessa forma a interação entre cidade e zona rural torna-se necessária para o desenvolvimento de ambas. Não somente no âmbito econômico, mas também cultural e social. </p>

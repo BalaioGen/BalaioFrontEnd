@@ -23,7 +23,7 @@
         <div class="card-body text-center">
           <h5 class="card-title fonte-titulo">{{item.nomeproduto}}</h5>
           <p class="card-text fonte-preco">{{item.valor | currency}}</p>
-          <p class="card-text fonte-categoria"> <small>{{item.categoria.descricao}}</small></p>
+          <!-- <p class="card-text fonte-categoria"> <small>{{item.categoria.descricao}}</small></p> -->
           <div class="d-flex justify-content-center">
             <button class="btn btn-danger mr-2" [routerLink]="['/produto-delete', item.id]" *ngIf='auth.logado()'>Excluir</button>
             <button class="btn btn-success" [routerLink]="['/produto-edit', item.id]"  *ngIf='auth.logado()'>Editar</button>

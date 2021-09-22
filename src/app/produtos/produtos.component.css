@@ -40,12 +40,17 @@
 .fonte-preco{
     color: #f69733 ;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .fonte-categoria{
     font-family: 'Alumni Sans', sans-serif;
     font-size: 1.2rem;
     
+}
+.button-edit{
+    height: 2rem;
+    font-size: 8pt;
 }
 
 @media (max-width:540px) {

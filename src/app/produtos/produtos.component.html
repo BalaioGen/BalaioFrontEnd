@@ -18,7 +18,7 @@
   <!-- cards para anuncio dos produtos -->
   <div class="row">
     <div class="col algn" *ngFor="let item of listaProdutos">
-      <div class="card alturacard"  [routerLink]="['/produtos-view', item.id]">
+      <div class="card alturacard mt-5"  [routerLink]="['/produtos-view', item.id]">
         <img src="{{item.fotoproduto}}" class="card-img-top tamanhoimg" alt="Foto do protudo">
         <div class="card-body text-center">
           <h5 class="card-title fonte-titulo">{{item.nomeproduto}}</h5>

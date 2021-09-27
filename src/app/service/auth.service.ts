@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   editlogado(usuario:UsuarioModel):Observable<UsuarioModel>{
-    return this.http.put<UsuarioModel>(`​https://balaiopi.herokuapp.com/usuarios​/alterar`,usuario, this.token)
+    return this.http.put<UsuarioModel>(`https://balaiopi.herokuapp.com/usuarios/alterar`, usuario, this.token)
   }
 
   getuserlogado(id:number):Observable<UsuarioModel>{

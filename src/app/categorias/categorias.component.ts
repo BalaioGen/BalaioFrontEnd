@@ -47,7 +47,14 @@ export class CategoriasComponent implements OnInit {
       this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!')
       this.findAllCategorias()
       this.categoria = new CategoriaModel()
+    })
+  }
 
+  atualizar(){
+    this.categoriasService.putCategoria(this.categoria).subscribe((resp: CategoriaModel) => {
+      this.categoria = resp
+      alert('Categoria atualizada com sucesso!')
+      this.router.navigate(['/cadastroproduto'])
     })
   }
 

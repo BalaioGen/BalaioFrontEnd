@@ -28,7 +28,7 @@ export class CadastroprodutoComponent implements OnInit {
     private router: Router,
     private categoriasService: CategoriasService) {
       
-     }
+  }
 
   ngOnInit() {
     if (environment.token == '') {
@@ -36,7 +36,7 @@ export class CadastroprodutoComponent implements OnInit {
     }
 
     console.log(environment.token)
-     
+
     this.categoriasService.refreshToken()
     this.produtoService.refreshToken()
 
@@ -60,7 +60,7 @@ export class CadastroprodutoComponent implements OnInit {
       this.router.navigate(['/produtos'])
       alert("Produto cadastrado com sucesso!")
     })
-   
+
     }
 
     
@@ -90,7 +90,8 @@ export class CadastroprodutoComponent implements OnInit {
       this.categoria = resp
       alert("Categoria atualizada com sucesso!")
       this.findAllCategorias()
-      this.router.navigate(['/home'])
+      this.categoria = new CategoriaModel()
+      
 
     })
   }

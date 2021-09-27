@@ -15,6 +15,8 @@ export class MenuComponent implements OnInit {
   userlogado : UsuarioModel;
   foto = environment.foto;
   categoria: CategoriaModel
+  confirmarSenha: string;
+  tipoUsuario: any;
   constructor(
     public auth: AuthService, 
     private router: Router,
@@ -35,7 +37,12 @@ export class MenuComponent implements OnInit {
     environment.tipo = ''
   }
 
-
+  confirmaSenha(event: any) {
+    this.confirmarSenha = event.target.value;
+  }
+  usuarioTipo(event: any) {
+    this.tipoUsuario = event.target.value;
+  }
   getuser(){
     this.auth.getuserlogado(environment.id).subscribe((resp:UsuarioModel)=>{
       this.userlogado = resp
@@ -45,11 +52,13 @@ export class MenuComponent implements OnInit {
 
 
   putuser(){
-
+    this.userlogado.tipo = this.tipoUsuario
     this.auth.editlogado(this.userlogado).subscribe((resp:UsuarioModel)=>{
       this.userlogado = resp;
       alert("Usuario Alterado, Por favor se reconecte");
-      this.router.navigate(['/entrar']);
+      this.sair();
     })
+    console.log(this.userlogado)
   }
 }
+

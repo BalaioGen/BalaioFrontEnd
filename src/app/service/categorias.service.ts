@@ -39,7 +39,11 @@ export class CategoriasService {
   }
 
   putCategoria(categoria: CategoriaModel): Observable<CategoriaModel>{
-    return this.http.put<CategoriaModel>(`https://balaiopi.herokuapp.com/categorias/`, categoria, this.token)
+    return this.http.put<CategoriaModel>('https://balaiopi.herokuapp.com/categorias/', categoria, this.token)
+  }
+
+  deleteCategoria(id: number){
+    return this.http.delete(`https://balaiopi.herokuapp.com/categorias/${id}`, this.token)
   }
 
 }

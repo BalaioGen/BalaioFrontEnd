@@ -83,12 +83,101 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
+              <div class="text-center"><img [src]="userlogado.foto" class="img-user"></div>
+
+              <div class="form-group mt-5 fonte-site">
+                  <label for="nome">Nome</label>
+                  <input class="form-control" type="text" name="nome" id="nome"
+                  placeholder="Digite seu nome" required [(ngModel)]='userlogado.nome'>
+              </div>
+
+              <div class="form-group fonte-site">
+                  <label for="usuario">Usuário</label>
+                  <input class="form-control" type="email" name="usuario" id="usuario"
+                  placeholder="Digite seu usuário" required [(ngModel)]='userlogado.usuario'>
+              </div>
+              
+              <div class="form-group d-flex">
+                  <div class="w-50 mr-5">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua data de Nascimento" required [(ngModel)]='userlogado.dataNascimento'>
+                  </div>
+                
+                  <div class="w-50">
+                    <label for="CPF">CPF</label>
+                    <input class="form-control" type="number" name="cpf" id="cpf" placeholder="Digite seu CPF" required [(ngModel)]='userlogado.cpf'>                        
+                  </div>
+                </div>
+
+              <div class="form-group d-flex">
+                  <div class="w-50 mr-5">
+                    <label for="CEP">CEP</label>
+                    <input class="form-control" type="number" name="CEP" id="CEP" placeholder="Digite seu CEP" required [(ngModel)]='userlogado.cep'>
+                  </div>
+                
+                  <div class="w-50">
+                    <label for="numero">Número</label>
+                    <input class="form-control" type="number" name="numero" id="numero" placeholder="Digite seu número residencial" required [(ngModel)]='userlogado.numcasa'>
+                  </div>
+                </div>
+
+                <div class="form-group d-flex">
+                  <div class="w-50 mr-5">
+                      <label for="complemento">Complemento</label>
+                      <input class="form-control" type="complemento" name="complemento" id="complemento"
+                      placeholder="Digite seu Complemento" [(ngModel)]='userlogado.complemento'>
+                  </div>
+                
+                  <div class="w-50">
+                      <label for="telefone">Telefone</label>
+                      <input class="form-control" type="number" name="telefone" id="telefone"
+                      placeholder="Digite seu telefone" [(ngModel)]='userlogado.telefone'>
+                  </div>
+                </div>
+             
+              <div class="form-group d-flex">
+                  <div class="w-50 mr-5">
+                    <label for="senha">Senha</label>
+                    <input class="form-control" type="password" name="senha" id="senha" [(ngModel)]="userlogado.senha" placeholder="Digite o sua senha" required>
+                  </div>
+                
+                  <!-- <div class="w-50">
+                    <label for="confirmSenha">Confirmar senha</label>
+                    <input class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Digite o seu nome completo" required [(ngModel)]="userlogado.senha">
+                  </div> -->
+                </div>
+                <div class="w-50">
+                  <label for="confirmSenha">Digite seu email</label>
+                  <input class="form-control" type="email" name="emailuser" id="emailuser" placeholder="Digite aqui seu email!" required [(ngModel)]="userlogado.email">
+                </div>
+              
+
+              <div class="form-group fonte-site mt-3">
+                  <label for="tipo">Tipo de Usuário</label>
+                  <select class="form-control" name="tipo" id="tipo" (change)='usuarioTipo($event)'>
+                      <option>Selecione um tipo de usuário:</option>
+                      <option value="vendedor">Vendedor</option>
+                      <option value="comprador">Comprador</option>
+                      <option value="administrador">Administrador</option>
+                  </select>
+              </div>
+
+              <div class="form-group fonte-site">
+                  <label for="descricaouser">Caso seu perfil seja vendedor, descreva seu comércio:</label>
+                  <input class="form-control" type="text" name="descricaouser" id="descricaouser"
+                  placeholder="Descreva..." [(ngModel)]='userlogado.descricaouser'>
+              </div>
+              <div class="form-group fonte-site">
+                <label for="descricaouser">Link da sua foto de perfil!</label>
+                <input class="form-control" type="text" name="foto" id="foto" placeholder="Digite a url da sua foto" [(ngModel)]="userlogado.foto">
+            </div>
+          </div>
+ 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-outline-warning" routerLink="/home" data-dismiss="modal">Cancelar</button>
+          <button (click)="putuser()" type="submit" class="btn btn-outline-info" data-dismiss="modal">Save</button>
+          <button (click)="putuser()" type="submit" class="btn btn-outline-danger" data-dismiss="modal">Deletar Usuario</button>
+      </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>   

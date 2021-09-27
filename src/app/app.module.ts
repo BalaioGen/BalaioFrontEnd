@@ -25,6 +25,7 @@ import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delet
 import { ProdutosViewComponent } from './produtos-view/produtos-view.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 registerLocaleData(ptBr);
 
 // const routes: Routes = [
@@ -51,6 +52,7 @@ registerLocaleData(ptBr);
     EditProdutoComponent,
     ProdutosDeleteComponent,
     ProdutosViewComponent,
+    CategoriaDeleteComponent,
   ],
   imports: [
     BrowserModule,

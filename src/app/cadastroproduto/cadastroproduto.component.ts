@@ -91,8 +91,6 @@ export class CadastroprodutoComponent implements OnInit {
       alert("Categoria atualizada com sucesso!")
       this.findAllCategorias()
       this.categoria = new CategoriaModel()
-      
-
     })
   }
 

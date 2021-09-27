@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col algn" *ngFor="let item of Produtos">
+          <div class="card alturacard mt-5"  [routerLink]="['/produtos-view', item.id]">
+            <img src="{{item.fotoproduto}}" class="card-img-top tamanhoimg" alt="Foto do protudo">
+            <div class="card-body text-center">
+              <h5 class="card-title fonte-titulo">{{item.nomeproduto}}</h5>
+              <p class="card-text fonte-preco">{{item.valor | currency}}</p>
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-outline-danger mr-2 button-edit" [routerLink]="['/produto-delete', item.id]">Excluir</button>
+                <button class="btn btn-outline-success button-edit" [routerLink]="['/produto-edit', item.id]">Editar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+</div>

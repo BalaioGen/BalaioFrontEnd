@@ -22,6 +22,7 @@
         <div class="dropdown-menu card-size" aria-labelledby="navbarDropdownMenuLink"  >
           <!-- <a class="dropdown-item" routerLink='/cadastroprod'>Cadastre Produtos</a> -->
           <a class="dropdown-item" routerLink="/produtos" >Catálogo</a>
+          <a class="dropdown-item" routerLink="/vendedor-view" *ngIf="auth.uservend()">Veja Seus Items</a>
         </div>
       </div>
   </li>
@@ -37,7 +38,8 @@
       </div>
     </div>
 </li>
-  
+
+
   <li>
     <div class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

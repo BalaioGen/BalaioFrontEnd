@@ -26,7 +26,8 @@ import { ProdutosViewComponent } from './produtos-view/produtos-view.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
-registerLocaleData(ptBr);
+import { VendedorviewComponent } from './vendedorview/vendedorview.component';
+
 
 // const routes: Routes = [
 //   {path:"", redirectTo: "entrar", pathMatch:"full"},
@@ -53,6 +54,8 @@ registerLocaleData(ptBr);
     ProdutosDeleteComponent,
     ProdutosViewComponent,
     CategoriaDeleteComponent,
+    VendedorviewComponent,
+
   ],
   imports: [
     BrowserModule,

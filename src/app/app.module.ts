@@ -17,7 +17,6 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { CadastroprodutoComponent } from './cadastroproduto/cadastroproduto.component';
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 import { EditProdutoComponent } from './edit/edit-produto/edit-produto.component';
-
 // colocar virgula
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -26,6 +25,7 @@ import { ProdutosViewComponent } from './produtos-view/produtos-view.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+registerLocaleData(ptBr);
 import { VendedorviewComponent } from './vendedorview/vendedorview.component';
 
 

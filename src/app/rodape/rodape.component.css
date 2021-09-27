@@ -2,14 +2,15 @@
     .fonte-site{
     font-size: 0.75rem;
     font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    vertical-align: bottom;
     }
 
     .social-network {
     list-style: none;
     padding: 0;
     }
-    
+
     ul li {
         display: inline;
         margin: 0;
@@ -23,7 +24,6 @@
 
     .bg-azul {
     background-color: #8DE2E5;
-    padding-bottom: 0%;
     }
 
     i {

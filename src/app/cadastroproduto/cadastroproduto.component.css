@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
 #img-bg{
     background-image: url(https://i.imgur.com/5SMsuTQ.png);
     margin-left: 15%;
@@ -18,8 +17,12 @@
 .alturasenha{
     width: 85% !important;
 }
-
-.cadastrocategoria{
-    weight: 400px;
-    height: 40px;
+.botao-adicionar{
+    background-color: #f69733;
+    color: #ffffff
+}
+.botao-adicionar:hover{
+    color: #fff3e6;
+    background-color: #fd8421;
+    transition: 0.2s;
 }

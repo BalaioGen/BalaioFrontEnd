@@ -44,3 +44,8 @@ li:hover{
     
 
 }
+
+.img-user{
+    border-radius:100%;
+    height:200px;
+}

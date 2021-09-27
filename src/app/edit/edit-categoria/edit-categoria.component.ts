@@ -15,7 +15,7 @@ export class EditCategoriaComponent implements OnInit {
   produto: ProdutoModel = new ProdutoModel()
 
   categoria: CategoriaModel = new CategoriaModel()
-  idCat: number
+
 
   constructor(
     private categoriasService : CategoriasService,
@@ -28,20 +28,22 @@ export class EditCategoriaComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
+
+    let id = this.route.snapshot.params['id']
+    this.findByIdCategoria(id)
   }
 
   findByIdCategoria(id:number){
-    this.categoriasService.getCategoriasById(id).subscribe()
+    this.categoriasService.getCategoriasById(id).subscribe((resp: CategoriaModel) =>{
+      this.categoria = resp
+    })
   }
   
   atualizar(){
-    this.categoria.id = this.idCat
-    this.produto.categoria = this.categoria
-
-    this.categoriasService.putCategoria(this.categoria).subscribe((resp: CategoriaModel)=>{
+    this.categoriasService.putCategoria(this.categoria).subscribe((resp:CategoriaModel)=>{
       this.categoria = resp
       alert('Categoria atualizada com sucesso!')
-      this.router.navigate(['/home'])
+      this.router.navigate(['/produtos'])
     })
   }
 

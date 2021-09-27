@@ -2,7 +2,8 @@
 
 
 #img-bg{
-    background-image: url(https://i.imgur.com/ojdHpMU.png);
+    background-image: url(https://i.imgur.com/cTiM8eB.png);
+    margin-top: 2rem;
     margin-left: 15%;
     min-height: 80vh;
     border-radius: 40px;
@@ -10,7 +11,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .fonte-titulo{
     font-family: 'Montserrat', sans-serif;
     
@@ -18,7 +18,7 @@
 
 .fonte-descricao{
     font-family: 'Oxygen', sans-serif;
-    font-weight: 200;
+    font-weight: 100;
 }
 
 .fonte-card{

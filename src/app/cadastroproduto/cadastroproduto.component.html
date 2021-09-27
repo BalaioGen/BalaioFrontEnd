@@ -26,8 +26,9 @@
             </select>
           </div>
           <div class="d-flex mt-2">
-          <button type="button" class="btn botao-adicionar mr-1" data-toggle="modal" data-target="#exampleModal">Cadastre uma categoria</button>
-          <button type="button" class="btn botao-adicionar ml-1" data-toggle="modal" data-target="#modalEdit">Edite uma categoria</button>
+          <button type="button" class="btn botao-adicionar mr-1" data-toggle="modal" data-target="#exampleModal">Cadastre categoria</button>
+          <!-- <button type="button" class="btn botao-adicionar ml-1" data-toggle="modal" data-target="#modalEdit" >Edite uma categoria</button> -->
+          <button type="button" class="btn botao-adicionar ml-1" data-toggle="modal" data-target="#modalDelete" >Editar categoria</button>
         </div>
           </div>
 
@@ -118,8 +119,8 @@
 </div>
 
 
-<!--modal edit categoria -->
-<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- modal edit categoria
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngFor='let item of listaCategorias'>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -130,19 +131,57 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label for="descricao">Escolha uma Categoria!</label>
-          <select  class="form-control custom-select mb-3" name="categorias" id="selectcatedoria">
-            <option selected>Selecione a Categoria</option>
-            <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.descricao}}</option>
-          </select>
+          <label for="nome">Categoria</label>
+            <select class="form-control custom-select" name="categoria" id="inputGroupSelect01" placeholder="Selecione a categoria"
+              [(ngModel)]='idCat' (change)='findByIdCategoria()'>
+              <option selected>Selecione a Categoria</option>
+              <option *ngFor='let item of listaCategorias' value="{{item.id}}">{{item.descricao}}</option>
+            </select>
           
-
           <label for="palavraChave">Digite as alterações da categoria</label>
           <input [(ngModel)]='categoria.palavraChave' type="text" class="form-control mb-3" id="palavraChave" placeholder="Digite as alterações">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" (click)="atualizarcategoria()" data-dismiss="modal">Salvar</button>
+              
+        <button class="btn btn-outline-danger mr-2 button-edit"  [(ngModel)]='idCat' (change)='findByIdCategoria()'[routerLink]="['/categoria-delete', item.id]" >Excluir Categoria</button> 
+        
+        <button type="button" class="btn btn-primary" (click)="atualizarcategoria()" data-dismiss="modal">Atualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+
+
+<!--modal editdel categoria -->
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDelete">Atualize uma categoria</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <table class="table table-hover">
+            <thead>
+                <th scope="col">Descrição</th>
+            </thead>
+            <tbody>
+                <tr *ngFor='let categoria of listaCategorias'>
+                <th>{{categoria.id}}</th>
+                <td>{{categoria.descricao}}</td>
+                <td class="d-flex justify-content-end">
+                    <button  data-dismiss="modal" class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]" >Editar</button>
+                    <button data-dismiss="modal" class="btn btn-danger" [routerLink]="['/categoria-delete', categoria.id]">Excluir</button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

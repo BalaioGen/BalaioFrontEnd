@@ -1,0 +1,31 @@
+<div class="container mb-5 mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center fonte-titulo">Apagar Categoria</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-5 ml-5" id="img-bg"></div>
+
+        <div class="col-md-6">
+
+            <h4 class="text-center fonte-descricao mt-5">Ao excluir a categoria, você irá exluir todos os produtos pertencente a categoria. Você tem certeza que deseja apagar essa categoria?</h4>
+
+            <div class='card text-center justify-content-center mt-5'>
+                <div class="card-body" style="width:auto">
+                    <h5 class='card-title fonte-card m-0'>{{categoria.palavraChave}}</h5>
+                    <small class="text-muted">Categoria: {{categoria.descricao}}</small>
+                </div>
+            
+
+            <div class="card-bottom d-flex justify-content-center mt-5">      
+                    <button class='btn btn-danger mr-2 ' routerLink='/produtos'>Não</button>
+                    <button class='btn btn-success' (click)='apagar()'>Sim</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    

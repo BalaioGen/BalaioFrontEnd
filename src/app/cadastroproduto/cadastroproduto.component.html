@@ -154,7 +154,7 @@
 
 
 <!--modal editdel categoria -->
-<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngFor='let item of listaCategorias'>
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -174,16 +174,14 @@
                 <th>{{categoria.id}}</th>
                 <td>{{categoria.descricao}}</td>
                 <td class="d-flex justify-content-end">
-                    <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]" >Editar</button>
-                    <button class="btn btn-danger" [routerLink]="['/categoria-delete', categoria.id]">Excluir</button>
+                    <button  data-dismiss="modal" class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]" >Editar</button>
+                    <button data-dismiss="modal" class="btn btn-danger" [routerLink]="['/categoria-delete', categoria.id]">Excluir</button>
                 </td>
                 </tr>
-                
             </tbody>
         </table>
 
-        
-        <button type="button" class="btn btn-primary" (click)="atualizarcategoria()" data-dismiss="modal">Atualizar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

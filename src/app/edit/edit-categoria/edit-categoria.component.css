@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&display=swap');
+
+
+#img-bg{
+    background-image: url(https://i.imgur.com/ojdHpMU.png);
+    margin-left: 15%;
+    min-height: 80vh;
+    border-radius: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fonte-titulo{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.fonte-descricao{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 200;
+}
+
+.fonte-card{
+    font-family: 'Montserrat', sans-serif;
+    color: #f69733;
+    
+}

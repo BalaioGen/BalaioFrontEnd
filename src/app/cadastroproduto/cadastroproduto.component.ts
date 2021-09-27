@@ -89,8 +89,12 @@ export class CadastroprodutoComponent implements OnInit {
     this.categoriasService.putCategoria(this.categoria).subscribe((resp: CategoriaModel)=>{
       this.categoria = resp
       alert("Categoria atualizada com sucesso!")
+
+      console.log(this.categoria)
+      
       this.findAllCategorias()
       this.categoria = new CategoriaModel()
+      
     })
   }
 

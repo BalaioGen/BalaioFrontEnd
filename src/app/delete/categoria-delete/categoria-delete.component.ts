@@ -46,7 +46,7 @@ export class CategoriaDeleteComponent implements OnInit {
   
   apagar(){
     this.categoriasService.deleteCategoria(this.idCat).subscribe(()=>{
-      this.alertas.showAlertSuccess("Categoria excluida com sucesso!!")
+      alert('Categoria excluída com sucesso!')
       this.router.navigate(['/produtos'])
       })
     }  

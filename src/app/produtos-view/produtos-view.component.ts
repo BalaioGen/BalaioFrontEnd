@@ -12,7 +12,9 @@ import { ProdutosService } from '../service/produtos.service';
 export class ProdutosViewComponent implements OnInit {
 
   produtos: ProdutoModel = new ProdutoModel();
-  listaUsuarios: UsuarioModel[]
+  
+  // listaUsuarios: UsuarioModel[]
+  // cepformatado: string
   // listaProdutos: ProdutoModel[];
 
   constructor(
@@ -24,9 +26,12 @@ export class ProdutosViewComponent implements OnInit {
   ngOnInit() {
     this.produtosService.refreshToken()
     
+    // this.cepFormatado()
+    
     let id = this.route.snapshot.params['id']
     
     this.findProdutoById(id)
+
   }
 
   findProdutoById(id: number){
@@ -34,5 +39,13 @@ export class ProdutosViewComponent implements OnInit {
       this.produtos = resp
     })
   }
+
+  //  mascara para o cep
+  // cepFormatado(){
+  // console.log("teste")
+  // let cep: number = this.produtos.usuario.cep;
+  // let cepstring: string = cep.toString();
+  // this.cepformatado = cepstring.slice(0,5) + '-' + cepstring.slice(5)
+  // }
 
 }

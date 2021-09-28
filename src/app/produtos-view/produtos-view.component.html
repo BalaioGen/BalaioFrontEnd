@@ -1,4 +1,7 @@
-<div class="container">
+<!-- <script src = " bower_components / angular-zipcode-filter / zipcode.js " > </script> 
+<script src = " node_modules / angular-zipcode-filter / zipcode.js " > </script>  -->
+
+<div class="container espaco">
   
   <!-- imagem -->
   <div class="row">
@@ -35,7 +38,7 @@
 
   <!-- card com preço e botão comprar -->
   <div class="col col-md-6">
-    <div class="card" style="width: auto;">
+    <div class="card mb-5" style="width: auto;">
       <div class="card-body">
         <h4 class="card-title fonte-titulo">{{produtos.nomeproduto}}</h4>
         <h5 class="preco mb-4">{{produtos.valor | currency}}</h5>
@@ -43,7 +46,7 @@
         <button type="button" href="#" class="btn botao-adicionar btn-block fonte-titulo">Adicionar ao Balaio</button>
         <button type="button" href="#" class="btn btn-info btn-block fonte-titulo" routerLink='/produtos'>Continuar comprando</button>
         <hr>
-        <p class="fonte-descricao">Disponibilidade: {{produtos.quantidade}} Unidades</p>
+        <p class="fonte-descricao">Disponibilidade: {{produtos.quantidade}} unid.</p>
         <hr>
         <!-- colocar aqui as informações da pessoa que cadastrou o produto -->
         <h6>Informações do(a) anunciante</h6>
